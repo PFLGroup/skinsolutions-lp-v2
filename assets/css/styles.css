@@ -252,8 +252,10 @@ section { padding-block: clamp(3.5rem, 8vw, 7rem); }
   display: flex;
   align-items: center;
   justify-content: space-between;
+  gap: clamp(1.5rem, 3vw, 3rem);
   min-height: var(--header-h);
 }
+.brand { flex-shrink: 0; }
 
 .brand { display: inline-flex; align-items: center; gap: .65rem; color: var(--text-on-dark); }
 .brand__mark {
@@ -280,7 +282,7 @@ section { padding-block: clamp(3.5rem, 8vw, 7rem); }
   display: flex;
   align-items: center;
   flex-wrap: nowrap;
-  gap: clamp(1rem, 2vw, 1.9rem);
+  gap: clamp(.55rem, 1.2vw, 1.1rem);
 }
 .nav__list a {
   font-size: .82rem;
@@ -1074,8 +1076,9 @@ body.nav-open { overflow: hidden; }
   .timeline__step { border-left: 1px solid var(--hairline-light); border-top: 3px solid var(--gold); }
 }
 
-/* Hamburger / mobile nav */
-@media (max-width: 899px) {
+/* Hamburger / mobile nav — włączany do 1199px, by gęste poziome menu
+   nie ściskało się i nie nachodziło na logo (pełna nawigacja tylko ≥1200px) */
+@media (max-width: 1199px) {
   .nav__toggle { display: flex; }
   .nav__list {
     position: fixed;
