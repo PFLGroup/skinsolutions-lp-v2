@@ -279,12 +279,14 @@ section { padding-block: clamp(3.5rem, 8vw, 7rem); }
 .nav__list {
   display: flex;
   align-items: center;
+  flex-wrap: nowrap;
   gap: clamp(1rem, 2vw, 1.9rem);
 }
 .nav__list a {
   font-size: .82rem;
   letter-spacing: .1em;
   text-transform: uppercase;
+  white-space: nowrap;
   transition: color .25s var(--ease);
   position: relative;
 }
